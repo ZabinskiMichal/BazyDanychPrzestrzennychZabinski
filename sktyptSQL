@@ -1,0 +1,51 @@
+CREATE EXTENSION POSTGIS;
+
+SELECT * FROM zad2.popp;
+
+--zad4 - wyznacz liczbe budynkow odległych o mniej niz 1000m od glownych rzek,
+-- zapisz otrzymane budynki do nowej tabeli
+
+SELECT * FROM zad2.popp AS B, zad2.majrivers AS R WHERE
+f_codedesc = 'Building' AND ST_Distance(B.geom, R.geom) < 1000;
+
+SELECT COUNT (*) FROM zad2.airports
+
+SELECT COUNT (*) FROM (SELECT * FROM zad2.popp AS B, zad2.majrivers AS R WHERE
+f_codedesc = 'Building' AND ST_Distance(B.geom, R.geom) < 1000)
+
+--zad5 - utworz tabele airpotrsNew na podstawie tabeli airports
+CREATE TABLE zad2.airportsNew as SELECT name, geom, elev FROM zad2.airports
+SELECT * FROM zad2.airportsNew
+
+
+-- znajdz lotnisko polozone najbardziej na zachod
+--wpolrzedna pozioma to Y
+SELECT name, ST_Y(geom) FROM zad2.airportsNew ORDER BY st_y
+
+--najbardziej na wschod
+
+--ok
+--zad6 - Wyznacz pole powierzchni obszaru, który oddalony jest mniej niż 1000 jednostek od 
+--najkrótszej linii łączącej jezioro o nazwie ‘Iliamna Lake’ i lotnisko o nazwie „AMBLER”
+
+--najpierw najktorsza linia laczaca Jeziora
+SELECT geom FROM zad2.lakes WHERE names = 'Iliamna Lake'
+SELECT geom FROM zad2.airports WHERE name = 'AMBLER'
+
+SELECT ST_Area(ST_Buffer(ST_ShortestLine((SELECT geom FROM zad2.lakes WHERE names = 'Iliamna Lake'), 
+(SELECT geom FROM zad2.airports WHERE name = 'AMBLER')),1000))
+				 								 
+--zad7 - napisz zapytanie ktore zwróci sumaryczne pole powierzchni poligonow reprezentujacych 
+-- poszczegolne typy drzew znajdujace sie na obszarze tundry i bagien
+
+SELECT TR.vegdesc, T.area_km2 FROM zad2.trees AS TR, zad2.tundra AS T
+WHERE ST_COntains(T.geom, TR.geom)
+
+SELECT cat, f_codedesc, f_code, area_km2 FROM zad2.tundra
+SELECT cat, f_codedesc, f_code, area_km2 FROM zad2.trees
+
+SELECT cat, f_codedesc, f_code FROM zad2.swamp
+SELECT * FROM zad2.swamp
+
+
+
