@@ -5,26 +5,54 @@ SELECT * FROM zad2.popp;
 --zad4 - wyznacz liczbe budynkow odległych o mniej niz 1000m od glownych rzek,
 -- zapisz otrzymane budynki do nowej tabeli
 
+-- I opcja
+SELECT * FROM zad2.popp AS B, zad2.majrivers AS R 
+WHERE (ST_Contains(ST_Buffer(R.geom,1000), B.geom)) AND B.f_codedesc = 'Building'
+
+--IIopcja - dzialajaca
 SELECT * FROM zad2.popp AS B, zad2.majrivers AS R WHERE
 f_codedesc = 'Building' AND ST_Distance(B.geom, R.geom) < 1000;
 
-SELECT COUNT (*) FROM zad2.airports
 
-SELECT COUNT (*) FROM (SELECT * FROM zad2.popp AS B, zad2.majrivers AS R WHERE
+--wyznaczeine liczby budynków
+SELECT COUNT(B.id) FROM zad2.popp AS B, zad2.majrivers AS R WHERE
+f_codedesc = 'Building' AND ST_Distance(B.geom, R.geom) < 1000;
+
+--dodanie wynikow do tabeli:
+CREATE TABLE zad2.tableB AS (SELECT B.id, B.geom, B.f_codedesc FROM zad2.popp AS B, zad2.majrivers AS R WHERE
 f_codedesc = 'Building' AND ST_Distance(B.geom, R.geom) < 1000)
+
+
+SELECT * FROM zad2.tableB
+
 
 --zad5 - utworz tabele airpotrsNew na podstawie tabeli airports
 CREATE TABLE zad2.airportsNew as SELECT name, geom, elev FROM zad2.airports
-SELECT * FROM zad2.airportsNew
 
+SELECT * FROM zad2.airportsNew
 
 -- znajdz lotnisko polozone najbardziej na zachod
 --wpolrzedna pozioma to Y
-SELECT name, ST_Y(geom) FROM zad2.airportsNew ORDER BY st_y
+SELECT name, ST_Y(geom) FROM zad2.airportsNew ORDER BY st_y LIMIT 1
 
+
+--szukamy najwiekszego Y - sortujemy malejaco
 --najbardziej na wschod
+SELECT name, ST_Y(geom) FROM zad2.airports ORDER BY st_y DESC LIMIT 1
 
---ok
+
+-- Do tabeli airportsNew dodaj nowy obiekt - lotnisko, które położone jest w punkcie środkowym 
+--drogi pomiędzy lotniskami znalezionymi w punkcie a.
+--Lotnisko nazwij airportB. Wysokość n.p.m. przyjmij dowolną.
+
+INSERT INTO zad2.airportsNew VALUES ('airportB',(SELECT ST_Centroid(ST_ShortestLine
+((SELECT geom FROM zad2.airportsNew WHERE name = 'NOATAK'),(SELECT geom FROM zad2.airportsNew 
+WHERE name = 'NIKOLSKI AS')))),100)
+
+
+SELECT * FROM zad2.airportsNew
+
+
 --zad6 - Wyznacz pole powierzchni obszaru, który oddalony jest mniej niż 1000 jednostek od 
 --najkrótszej linii łączącej jezioro o nazwie ‘Iliamna Lake’ i lotnisko o nazwie „AMBLER”
 
@@ -34,18 +62,19 @@ SELECT geom FROM zad2.airports WHERE name = 'AMBLER'
 
 SELECT ST_Area(ST_Buffer(ST_ShortestLine((SELECT geom FROM zad2.lakes WHERE names = 'Iliamna Lake'), 
 (SELECT geom FROM zad2.airports WHERE name = 'AMBLER')),1000))
-				 								 
+				 	
+					
 --zad7 - napisz zapytanie ktore zwróci sumaryczne pole powierzchni poligonow reprezentujacych 
 -- poszczegolne typy drzew znajdujace sie na obszarze tundry i bagien
 
-SELECT TR.vegdesc, T.area_km2 FROM zad2.trees AS TR, zad2.tundra AS T
-WHERE ST_COntains(T.geom, TR.geom)
+SELECT id, cat, vegdesc,f_code FROM zad2.trees
+SELECT * FROM zad2.tundra
 
-SELECT cat, f_codedesc, f_code, area_km2 FROM zad2.tundra
-SELECT cat, f_codedesc, f_code, area_km2 FROM zad2.trees
+--funckaj ST_Contains(A,B) zwraca true jesli jesli obiekt b zawiera sie całkowicie w obiekcie A
+SELECT SUM (ST_AREA(zad2.trees.geom)), zad2.trees.vegdesc FROM zad2.trees, zad2.tundra, zad2.swamp
+WHERE ST_CONTAINS(zad2.tundra.geom, zad2.trees.geom) OR ST_CONTAINS(zad2.swamp.geom, zad2.trees.geom)
+GROUP BY zad2.trees.vegdesc
 
-SELECT cat, f_codedesc, f_code FROM zad2.swamp
-SELECT * FROM zad2.swamp
 
 
 
