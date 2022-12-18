@@ -1,0 +1,54 @@
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Current FME version: FME 2022.1.3.0 (20220928 - Build 22630 - macosx)
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME_HOME is '/Library/FME/2022.1/'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Student Edition (node locked-crc)
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Serial Number: 2W2RXY69RLVZSUXYQBAP
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Temporary License: 49 days left.
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Machine host name is: MBP-Micha-3.fritz.box
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|OS Locale Name     : pl_PL
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|OS Locale Encoding : UTF-8
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Process Encoding   : UTF-8
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME API version: '4.0 20220615'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: FME_MF_DIR is '/Users/michalzabinski/Desktop/studia/5 semestr/Bazy Danych przestrzennych/zad8/'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'zajecia8.fmw'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2022.1.3.0'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Operating System: macOS Version 12.4 (Build 21F79)
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Platform: macosx
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|System Status: 214.85 GB of disk space available in the FME temporary folder (/private/var/folders/tj/klnky_451x91_m4ln0m0q5yc0000gn/T/wbrun_1671403530704_5753/fmetmp_11)
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|System Status: 8.00 GB of physical memory available
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|System Status: 9.00 GB of virtual memory available
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|START - ProcessID: 7214, peak process memory usage: 88720 kB, current process memory usage: 88724 kB
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `/Library/FME/2022.1/fme' `/Users/michalzabinski/Desktop/studia/5 semestr/Bazy Danych przestrzennych/zad8/wb-xlate-1671406752897_5753' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `50332' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `50241'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: Connection Storage: '/Users/michalzabinski/Library/Caches/Safe Software/FME/'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Shared folders for formats are : /Library/FME/2022.1/datasources;/Users/michalzabinski/Library/Application Support/FME/Formats
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Shared folders for transformers are : /Users/michalzabinski/Library/Caches/Safe Software/FME/Packages/22630-macosx/transformers;/Library/FME/2022.1/transformers
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Shared folders for coordinate systems are : /Users/michalzabinski/Library/Application Support/FME/CoordinateSystems
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Shared folders for coordinate system exceptions are : /Users/michalzabinski/Library/Application Support/FME/CoordinateSystemExceptions
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Shared folders for coordinate system grid overrides are : /Users/michalzabinski/Library/Application Support/FME/CoordinateSystemGridOverrides
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : /Users/michalzabinski/Library/Application Support/FME/CsmapTransformationExceptions
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Shared folders for transformer categories are : /Users/michalzabinski/Library/Application Support/FME/TransformerCategories
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: Reader Keyword is `MULTI_READER'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: Writer Keyword is `MULTI_WRITER'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: Writer Group Definition Keyword is `MULTI_WRITER_DEF'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: Reader type is `MULTI_READER'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: Writer type is `MULTI_WRITER'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: Current working folder is `/Users/michalzabinski/Desktop/studia/5 semestr/Bazy Danych przestrzennych/zad8'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: Temporary folder is `/private/var/folders/tj/klnky_451x91_m4ln0m0q5yc0000gn/T/wbrun_1671403530704_5753/fmetmp_11', set from environment variable `FME_TEMP'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: Cache folder is '/private/var/folders/tj/klnky_451x91_m4ln0m0q5yc0000gn/T'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: FME_HOME is `/Library/FME/2022.1/'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: Start freeing memory when the process exceeds 7.83 GB
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Configuration: Stop freeing memory when the process is below 5.87 GB
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Creating writer for format: 
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Creating reader for format: 
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Using MultiWriter with keyword `MULTI_WRITER' to output data (ID_ATTRIBUTE is `multi_writer_id')
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Writer output will be ordered by value of multi_writer_id
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|DYLD_LIBRARY_PATH is not set
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Loaded module 'LogCount_func' from file '/Library/FME/2022.1/plugins/logcount_func.so'
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME API version of module 'LogCount_func' matches current internal version (4.0 20220615)
+2022-12-19 00:39:21|   0.0|  0.0|ERROR |PointOnLineOverlayer (OverlayFactory): The clause '' within 'FACTORY_DEF {*} OverlayFactory FACTORY_NAME { PointOnLineOverlayer } INPUT LINE FEATURE_TYPE ShortestPathFinder_PATH INPUT POINT FEATURE_TYPE Tester_PASSED FLUSH_WHEN_GROUPS_CHANGE { <Unused> } TOLERANCE { } OVERLAP_COUNT_ATTRIBUTE { _overlaps } DEAGGREGATE_INPUT { Yes } MERGE_ATTRS { NO } MERGE_MEASURES { Yes } MEASURE_TYPE { Continuous } ATTR_ACCUM_MODE { <Unused> } ATTR_CONFLICT_RES { <Unused> } INCOMING_PREFIX { <Unused> } LIST_NAME { <Unused> } LIST_ATTRS_TO_INCLUDE { <Unused> } LIST_ATTRS_TO_INCLUDE_MODE { <Unused> } CANDIDATE_LIST_NAME { <Unused> } CANDIDATE_LIST_ATTRS_TO_INCLUDE { <Unused> } CANDIDATE_LIST_ATTRS_TO_INCLUDE_MODE { <Unused> } MODE COMPLETE OVERLAY_TYPE POINT_ON_LINE OUTPUT { LINE FEATURE_TYPE PointOnLineOverlayer_LINE } OUTPUT { POINT FEATURE_TYPE PointOnLineOverlayer_POINT } OUTPUT { ILLEGAL_GEOM FEATURE_TYPE PointOnLineOverlayer_<REJECTED> }' is incorrect.  The clause must look like: TOLERANCE <real number>
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|Translation FAILED with 1 error(s) and 0 warning(s) (0 feature(s) output)
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|FME Session Duration: 0 seconds. (CPU: 0.0s user, 0.0s system)
+2022-12-19 00:39:21|   0.0|  0.0|INFORM|END - ProcessID: 7214, peak process memory usage: 93716 kB, current process memory usage: 93716 kB
